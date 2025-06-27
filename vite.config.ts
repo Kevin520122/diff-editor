@@ -3,20 +3,25 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: './', // Ensures relative paths work on any domain
   build: {
-    lib: {
-      entry: 'src/index.ts',
-      name: 'DiffChatEditor',
-      fileName: (format) => `diff-chat-editor.${format}.js`
-    },
+    outDir: 'dist',
+    sourcemap: true,
     rollupOptions: {
-      external: ['react', 'react-dom'],
       output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM'
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['lucide-react'],
+          diff: ['diff-match-patch']
         }
       }
     }
+  },
+  server: {
+    port: 3000,
+    open: true
+  },
+  preview: {
+    port: 3000
   }
 }) 

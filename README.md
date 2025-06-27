@@ -2,6 +2,8 @@
 
 A self-contained React + TypeScript component that enables users to chat with OpenAI directly in the browser, receive rewrite suggestions, see inline diffs, accept/reject edits, and navigate between historic versions—all without any backend.
 
+## 🚀 [Live Demo](https://your-vercel-url.vercel.app)
+
 ## ✨ Features
 
 - **AI-Powered Text Editing**: Chat with OpenAI to get intelligent text improvements
@@ -34,7 +36,7 @@ A self-contained React + TypeScript component that enables users to chat with Op
 
 1. **Clone and install dependencies:**
 ```bash
-git clone <repository-url>
+git clone https://github.com/yourusername/diff-chat-editor.git
 cd diff-chat-editor
 npm install
 ```
@@ -45,7 +47,7 @@ npm run dev
 ```
 
 3. **Open your browser:**
-Navigate to `http://localhost:5173`
+Navigate to `http://localhost:3000`
 
 4. **Configure your OpenAI API key:**
 - Click the Settings icon in the header
@@ -108,8 +110,6 @@ Modify the system prompt in `src/utils/openai.ts`:
 const systemPrompt = `Your custom system prompt here...`;
 ```
 
-
-
 ## 🐛 Troubleshooting
 
 ### Common Issues
@@ -130,4 +130,16 @@ const systemPrompt = `Your custom system prompt here...`;
 4. **Performance issues with large texts**
    - The editor is optimized for documents under 10,000 characters
    - Consider breaking very large documents into sections
+
+## Deployment
+
+This project is optimized for Vercel deployment:
+
+```bash
+npm run build
+```
+
+## License
+
+MIT License - feel free to use this project for your own applications!
 
