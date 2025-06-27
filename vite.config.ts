@@ -6,13 +6,12 @@ export default defineConfig({
   base: './', // Ensures relative paths work on any domain
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: false, // Disable source maps for smaller bundle
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['lucide-react'],
-          diff: ['diff-match-patch']
+          ui: ['lucide-react']
         }
       }
     }

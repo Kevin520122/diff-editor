@@ -8,8 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "type-check": "tsc --noEmit",
-    "vercel-build": "npm run build"
+    "type-check": "tsc --noEmit"
   },
   "keywords": [
     "react",
